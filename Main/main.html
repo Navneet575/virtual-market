@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/main.css">
+    <link rel="stylesheet" href="./Styles/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>VM | HOME</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="Title">
+            <h1>VIRTUAL MARKET</h1>
+            <h2>ALL YOUR LOCAL SHOPS VIRTUALLY.</h2>
+        </div>
+        <div id="LS">
+            <button id='Login'>Login</button>
+            <button id='SignUp'>SignUp</button>
+        </div>
+        <div id='LSAfter'>
+            <h2></h2>
+            <button id='Logout'>Logout</button>
+        </div>
+        <div id='Form'>
+            <form id='form'>
+                <span style='float: left; display:none;'><input
+                        style='display: inline-block; margin-bottom: .8em;margin-left: 1em;' name='desig'
+                        type="checkbox"> Seller?</span>
+                <input id='email' type='email' name='email' placeholder="email" required>
+                <input id='password' type='password' name='password' placeholder="password" required>
+                <button id='submit' type='submit'>Login</button>
+            </form>
+            <form id='form1' style='display:none'>
+                <span style='float: left;'><input style='display: inline-block; margin-bottom: .8em;margin-left: 1em;'
+                        name='desig' type="checkbox"> Seller?</span>
+                <input id='email' type='email' name='email' placeholder="email" required>
+                <input id='password' type='password' name='password' placeholder="password" required>
+                <input id='name' type='text' name='name' placeholder='Name'>
+                <input id='phone' type='text' name='phone' placeholder='Contact'>
+                <button id='submit' type='submit'>Signup</button>
+            </form>
+        </div>
+
+        <div id='searchBar'>
+            <input type="text" autocapitalize="characters" placeholder="Virtual Shop ID" required></input>
+            <button>Enter Shop</button>
+        </div>
+        <div id='Mine'>
+            <h2>ME</h2>
+            <a href='Customer.html'>DashBoard</a>
+            <a href='Seller.html'>My Shop</a>
+        </div>
+        <a href='#All' id='showAll' style="float:left">Nearby Shops</a href='#All'>
+    </div>
+
+    <div class='main-container' class='Search' id='All'>
+        <div id="ShopsTab">
+            <h1></h1>
+            <h2></h2>
+            <div id='cards'>
+            </div>
+        </div>
+        <div class='Search-Filters'>
+            <a href='#' id='showAll'>HOME</a>
+            <div id='Search-Location'>
+                <input type='text' autocapitalize='on' placeholder="Enter the City" class='loc-bar__input'
+                    aria-label="search"></input>
+                <button id='loc-button' class="loc-bar__submit">
+                    <i class="fa fa-search" aria-label="submit"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script id='shop__card-template' type="text/template">
+        <div class='shop_card go'>
+            <h1>{{shopName}}</h1></br>
+            <h2>VId: {{vId}}</h2>
+        </div>
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='./js/libs/mustache.js'></script>
+    <script src='./JS/libs/jquery-3.5.1.min.js'></script>
+    <script src='./JS/main.js'></script>
+</body>
+
+</html>

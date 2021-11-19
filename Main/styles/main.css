@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    user-select: none;
+    color: white;
+}
+body{
+    background: url('./back.jpg');
+    overflow-x: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(22, 22, 22, 0.158);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+#All{
+    background: rgba(32, 32, 32, 0.075);
+    backdrop-filter: blur(2px);
+}
+.Title{
+    display: inline-block;
+    color: #ffffff;
+    background: rgba(22, 22, 22, 0.267);
+    font-size: x-large;
+    letter-spacing: .2em;
+    padding: 2vw;
+}
+
+.Title h2{
+    font-size: larger;
+}
+
+#LS, #LSAfter{
+    background: rgba(0, 0, 0, 0.329);
+    padding: 1vw;
+    float: right;
+}
+#LS button, #LSAfter button{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: x-large;
+    font-weight: bolder;
+    color: white;
+    margin: 1vw 1vw 0 0;
+    padding: .5vw 1vw;
+    border: 2px solid transparent;
+    transition: 0.05s ease-in-out;
+}
+#LS button:hover{
+    border: 2px solid white;
+    border-radius: 1rem;
+    background: rgba(245, 245, 245, 0.349);
+}
+#LSAfter button:hover{
+    border: 2px solid white;
+    border-radius: 1rem;
+    background: rgba(245, 245, 245, 0.349);
+}
+#LSAfter{
+    margin: 1vw 1vw 0 0;    
+    display: none;
+}
+#LS #Login{
+    border-right: 2px solid white;
+}
+#LS #SignUp{
+    border-left: 2px solid white;
+}
+
+#searchBar{
+    display: inline;
+    margin-top: 12vw;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#searchBar input{
+    padding: 0.2em 0.5em;
+    text-align: center;
+    font-size:2.5em;
+    margin: 0.5vw;
+    width: 40vw;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    background: rgba(236, 232, 247, 0.589);
+    backdrop-filter: blur(5px);
+    transition: .3s ease ;
+}
+#searchBar button{
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    font-size:1.7em;  
+    font-weight: 800;
+    margin: auto;
+    margin-top: 0.2em;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    color: rgba(49, 47, 47, 0.685);
+    transition: .1s ease;
+    box-shadow: rgba(88, 88, 88, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+}
+#searchBar input:focus{
+    background: rgba(12, 12, 12, 0.404);
+    border: .1em solid white;
+    border-radius: 0;
+}
+#searchBar button:hover{
+    color: #251236;
+    box-shadow: none;
+}
+#Form{
+    display: none;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.507);
+    padding: 0.5em;
+    display: inline-flex;
+    float: right;
+    position: relative;
+    top:15vh;
+    left:14vw;
+    /* height: 40vh; */
+    width: 15vw;
+    justify-content: center;
+    z-index: 10;
+}
+#form input, #form1 input{
+    display: block;
+    padding: 0.5em 1em;
+    font-size:1.0em;
+    border: none;
+    margin: auto;
+    color:black;
+    margin-top: 1vw;
+    outline: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    background: rgb(252, 255, 246);
+    transition: .3s ease ;
+}
+#form button, #form1 button{
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    font-size:1.3em;  
+    margin-top: 1vw;
+    margin-bottom:1vw;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    color: rgba(49, 47, 47, 0.685);
+    transition: .1s ease;
+}
+#form button:hover{
+    color:#251236;
+    background: #f4eee871;
+}
+#form1 button:hover{
+    color:#251236;
+    background: #f4eee871;
+}
+#Form{
+    display:none;
+}
+
+#Shops{
+    border-top:5px dashed #f8f1ff;
+    margin-top: 8vh;
+    padding: 1vw;
+}
+.shop_card{
+    position: relative;
+    cursor: pointer;
+    border-radius: 20px;
+    display: inline-flex;
+    padding: .5vw;
+    margin:.5vw;
+    width: 15vw; 
+    flex-direction: column;
+    background: rgba(73, 73, 75, 0.726);
+}
+.shop_card h1, .shop_card h2{
+    color:#251236;
+    padding: .2vw;
+    margin: .2vw;
+}
+.shop_card:hover{
+    background: rgba(255, 255, 255, 0.493);
+}
+#MineShop{
+    float: right;
+    color:#251236;
+    padding: .5vw;
+    margin: .5vw;
+}
+#showAll{
+    position: absolute;
+    cursor: pointer;
+    padding: 0.4em 0.8em;
+    text-align: center;
+    font-size:2em;  
+    bottom: 2vw;
+    right:2vw;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    color: rgba(49, 47, 47, 0.685);
+    transition: .1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.795);
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
+#showAll:hover{
+    border: 3px solid white ;
+    color: #251236;
+    background: rgba(255, 255, 255, 0.604);
+}
+
+#Search-Location{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    bottom: 2vw;
+    left:6vw;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    color: rgba(49, 47, 47, 0.685);
+    transition: .1s ease;
+    text-decoration: none;
+    border-radius: 20px;
+
+}
+#Search-Location input, #Search-Location button{
+    padding: .7rem 1.4rem;
+    font-size:2rem;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    color: rgba(49, 47, 47, 0.685);
+    transition: .1s ease;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.712);
+    border-radius: 20px;
+    margin: 0 .5vw;
+}
+#Search-Location button{
+    cursor: pointer;
+}
+#Search-Location button:hover{
+    color: #251236;
+}
+#ShopsTab{
+    padding: .5vw 1vw;
+}
+#ShopsTab h1{
+    color: white;
+    text-align: center;
+}
+#ShopsTab h2{
+    color: white;
+    text-align: center;
+}
+
+#Mine{
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.61);
+    padding: .5em;
+    border-radius: 20px;
+    height: 25vh;
+    min-width: 20vw;
+    max-width: max-content;
+    left:2vw;
+    bottom:5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5em;
+}
+#Mine h2{
+    color: #251236;
+    font-size: 3vw;
+    padding: .2em 1em;
+    letter-spacing: .05em;
+}
+#Mine a{
+    color: #251236;
+    text-align: center;
+    width: 60%;
+    padding: .5em 1em;
+    text-decoration: none;
+    font-size: x-large;
+    transition: .1s ease;
+    border-radius: 20px;
+    font-weight: 800;
+}
+#Mine a:hover{
+    color:white;
+    background: rgba(17, 17, 17, 0.644);
+}

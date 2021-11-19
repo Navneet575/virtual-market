@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM | VShop</title>
+    <link rel="stylesheet" href="./Styles/shop.css">
+</head>
+<body>
+
+    <div class='main-container'>
+        <nav>
+            <ul>
+                <li><a href='Customer.html' id='user'></a></li>
+            </ul>
+            
+        </nav>
+        <div id='ShopInfo'>
+            <img src='./Styles/Main.jpg'>
+            <address id='address'>
+
+            </address>
+        </div>
+        <div id='Shop__Items'>
+            <span id='scroll'></span>
+        </div>
+    </div>
+    <script id='Items-template' type="text/template">
+            <div class='items'>
+                <img class='item-images' width="400vw" height="200vh" src="{{src}}" alt='Not Found.'/>
+                <div class='item-info'>
+                    <h3 class='item-name'>Product X</h3>
+                <div class='item-details'>
+                    <span class='item__code cdl-tag'>ItemCode: {{code}}</span>
+                    <span class='item__cat cdl-tag'>Category: {{cat}}</span>
+                </div>
+                <div class='item-details'>
+                    <span class='items_qty cdl-tag'>Available qty. {{qty}}</span>
+                    <span class='items_price cdl-tag'>Price: {{price}}</span> 
+                    <span class='inc'>   
+                        <button class='minus'>-</button>
+                            <span class='qty'>0</span>
+                        <button class='plus'>+</button>
+                    </span>   
+                </div>
+                   
+                    <button class='Cart__add cdl-cta cdl-cta--full cdl-cta--primary'>Add to Cart</button>
+                </div>
+           </div>
+    </script>
+    <script id="Details-template" type="text/template">
+            <div id='Details'>
+                <h1>{{name}}</h1>
+                <div id='Address'>
+                    <h2>Address: <span>{{street}},</span></h2>
+                    <span> {{City}}</span>
+                    <br/>
+                    <span>{{State}},</span>
+                    <span> {{Country}},</span>
+                    <span> ({{Pin}})</span>
+                    <br/><span>Contact: {{phone}}</span>
+                </div>
+            </div>
+    </script>
+    <script src='./JS/libs/jquery-3.5.1.min.js'></script>
+    <script src='./JS/libs/mustache.js'></script>
+    <script src="./JS/shop.js"></script>
+</body>
+</html>

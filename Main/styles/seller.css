@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap');
+
+html{
+scroll-behavior: smooth;
+}
+
+*{
+padding: 0;
+margin: 0;
+font-family: 'Roboto Condensed', sans-serif;
+user-select: none;
+color: white;
+}
+body{
+background: #495464;
+overflow-y: hidden;
+background-size: cover;
+height: 100%;
+}
+#Shop__Items{
+    background-color: #3a6351;
+    height: 85vh;;
+    border-radius: 20px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;  
+    padding: 1vw 2.2vw;
+}
+::-webkit-scrollbar{
+    width: 20px;
+}
+.main-container{
+height: 100vh;
+width: 100vw;
+/* margin: 2.5vh 5vw; */
+background: rgba(240, 237, 237, 0.288);
+backdrop-filter: blur(15px);
+/* border-radius: 1rem; */
+padding: 1rem;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+nav ul{
+    list-style-type: none;
+    float: right;
+    display: flex;
+    margin-right: 2vw;
+}
+ul li{
+    color:white;
+    font-size: 1.75vw;
+    margin: 1vw;
+    font-weight: 900;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: .5vw 1vw;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+ul li:hover{
+    background: rgba(255, 255, 255, 0.233);
+}
+.active{
+    background-color: rgba(255, 255, 255, 0.233);
+}
+#cart h1, #cout h1{
+    text-align: center;
+}
+#UInfo{
+    position: absolute;
+    bottom: 3vh;
+    right: 2vh;
+    margin:2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.363);
+    padding: 1vw 2vw;
+    border-radius: 20px;
+    width: 20vw;
+    color:white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+a{
+    text-decoration: none;
+    color:white;    
+}
+/* button{    
+    float: right;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 2vw;
+    transition: .3s ease;
+    border-radius: 20px;
+    padding: 0.5vw;
+}
+button:hover{
+    background: rgba(255, 255, 255, 0.219);
+} */
+
+#User{
+    position: absolute;
+    padding: 1vw;
+    border-radius: 20px;
+    display: flex;
+}
+#User h2{
+    margin-left: 1vw;
+    text-align: center;
+    color: white;
+    align-self: center;
+    padding: .2em;
+    transition: .3s ease;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#User img{
+    height: 20vh;
+    width: 20vh;
+    border-radius: 100%;
+    border: 4px solid white;
+}
+#UInfo h2{
+    text-align: center;
+    margin-bottom: 1vh;
+}
+#UInfo input{
+    display: block;
+    font-size: 1.25vw;
+    padding: 0.5vw 1vw;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    color:rgb(75, 72, 72);
+}
+#UInfo button{
+    cursor: pointer;
+    display: block;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 2vw;
+    padding: .5vw 1vw;
+    margin: auto;
+    color: white;
+    background: gray;
+    font-weight: 900;
+}
+#UInfo button:hover{
+    background: rgba(255, 255, 255, 0.096);
+}
+address{
+    position: absolute;
+    bottom: 10vh;
+    font-size: 2vw;
+    color:white;
+    margin-left:2vw;
+}
+address span{
+    font-weight: 900;
+}
+#orders nav ul, #summary nav ul{
+    border-left: 2px solid white;
+    flex-direction: column;
+}
+#orders nav ul li, #summary nav ul li{
+    align-self: flex-end;
+}
+
+/*-------------------------- Orders --------------------- */
+#ORDRS{
+    height: 80vh;
+    max-height: 80vh;
+    width: 70vw;
+    overflow: auto;
+    }
+::-webkit-scrollbar{
+    width: 12px;
+}
+.order{
+    margin: 2vw 0;
+    background: #3a3939a9;
+    min-height: 25vh;
+    max-height: max-content;
+    padding: 1vw;
+    border-radius: 20px;
+}
+.C-Address{
+float: right;
+margin-right:1vw;
+text-align: left;
+}
+.C-Address span{
+    padding-left:1vw;
+    float: right;
+}
+.order button{
+    margin:1vw;
+    cursor: pointer;
+    color:black;
+    padding: .5vw 1vw;
+    border-radius: 20px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    transition: .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.order button:hover{
+    background: rgb(99, 180, 255);
+}
+th{
+    padding: 0 1.5vw;
+}
+td{
+    padding: 0 2vw;
+}
+table{
+    margin-top: 1vw;
+}
+#Shop__Items{
+    padding: 0.5vw;
+    background-color: rgba(0, 0, 0, 0.151);
+    max-height: 85vh;;
+    border-radius: 20px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;  
+    padding: 1vw 2.2vw;
+    width: 58vw;
+}
+::-webkit-scrollbar{
+    width: 20px;
+}
+.items{
+    position: relative;
+    display: flex;
+    margin:0.5vw;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.192);
+    padding: 0.5vw;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    font-size: larger;
+    font-weight: 500;
+}
+.items input{
+    display: inline;
+    outline: none;
+    border: none;
+    color: #132c33;
+    display: inline;
+    padding: .5vw;
+    background: #ffffff4f;
+    border-radius: 10px;
+    margin: .2vw;
+}
+.p,.q{
+    align-self: flex-end;
+    justify-self: center;
+}
+
+#AddImage{
+    position: absolute;
+    padding: 2vw;
+    border-radius: 20px;
+    right:9vw;
+    top:20vh;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    align-items: center;
+    background: #0d0d0e49;
+}
+#AddImage input{
+    border-radius: 20px;
+    padding: .5vw;
+    font-size: x-large;
+    margin:1vw;
+    outline: none;
+    border: none;
+    color:#132c33;
+}
+#AddImage input[type='file']{
+    padding:0;
+    font-size: 1vw;
+}
+#AddImage input[type='submit']{
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#AddImage input[type='submit']:hover{
+    background: #132c33;
+    color:white;
+}
+
+
+.cdl-cta {
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.cdl-cta--full  {
+    width: 100%;
+}
+
+.cdl-cta--primary {
+    background-color: #e9830f;
+}
+.cdl-cta--primary:hover {
+    background-color: #ff6600;
+}
+
+.cdl-cta--danger {
+    background-color: #9c2e1a;
+}
+.cdl-cta--danger:hover {
+    background-color: #ff3c19;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM | Seller</title>
+    <link rel="stylesheet" href="./Styles/seller.css">
+</head>
+
+<body>
+    <div class='main-container' id='Shop'>
+        <nav>
+            <ul>
+                <li class='active'><a href='#shop'>Shop</a></li>
+                <li><a href='#home'>HOME</a></li>
+            </ul>
+        </nav>
+        <div id='Shop__Items'>
+        </div>
+        <div id='AddImage'>
+            <input id='name' type='text' placeholder="Name" required>
+            <input id='cat' type='text' placeholder="Category" required>
+            <input id='qty' type='text' placeholder="Qty" required>
+            <input id='price' type='text' placeholder="Price" required>
+            <input id='itm-image' type='file' placeholder="Product Image" required accept="image/*">
+            <input type='submit' id='Add'></input>
+        </div>
+    </div>
+    <div class='main-container' id='home'>
+        <nav>
+            <ul>
+                <li class='active'><a href='#home'>HOME</a></li>
+                <li><a href='#Shop'>Shop</a></li>
+                <li><a href='#orders'>Orders</a></li>
+                <li><a href='#summary'>Summary</a></li>
+                <li id='logout'>Logout</li>
+            </ul>
+        </nav>
+        <div id='User'>
+            <img src='./Styles/Main.jpg'>
+            <h2><a href='/'>Shop NAME</a></h2>
+            <h2>Shop ID:<a id='vId' href='/shop.html'></a></h2>
+        </div>
+        <div id='UInfo'>
+            <h2>Shop Info</h2>
+            <input id='shop' type='text' placeholder="Shop Name" required /><br />
+            <input id='street' type='text' placeholder="Street Address" required /><br />
+            <input id='city' type='text' placeholder="City" required /><br />
+            <input id='state' type='text' placeholder="State" required /><br />
+            <input id='country' type='text' placeholder="Contry" required /><br />
+            <input id='pin' type='text' placeholder="Pin" required /><br />
+            <button id='update'>Add Address</button>
+        </div>
+        <address id='address'>
+            <h3 class="mt-0">Shop Address</h3>
+            <span id='Addr'>G.T. Road, Amritsar Byepass</span><br />
+            <span id='ACity'>jalandhar</span>, <span id='AState'>Punjab</span> <br />
+            <span id='ACount'>India</span> <span id='APin'>144011</span><br />
+
+            <i class="fa fa-phone fa-lg"></i>Tel.: <span id='CTel'></span><br>
+            <i class="fa fa-envelope fa-lg"></i>Email: <a id='CMail' href="mailto:me@mydomain.hi"></a>
+
+            <!-- <span id='verified' style='display: none;'><i style='color:green;'
+                    class='fa fa-check'>Verified</i></span></br>
+
+            <span id='notVerified' style=' display:none'><i style='color:red;' class='fa fa-times'>Email Not
+                    Verified</i><button id='verify'>Verify Here</button>
+                <div id='con' style="display: none;">
+                    <input type='text' id='vToken' placeholder="Enter Verifiaction Token" />
+                    <button type='submit' id='confirmToken'>Confirm</button>
+                </div>
+            </span> -->
+        </address>
+    </div>
+    <div class='main-container' id='orders'>
+        <nav>
+            <ul>
+                <li><a href='#home'>HOME</a></li>
+                <li class='active'><a href='#orders'>Orders</a></li>
+                <li><a href='#summary'>Orders Summary</a></li>
+            </ul>
+        </nav>
+        <h1>Orders</h1>
+        <div id='ORDRS'>
+        </div>
+    </div>
+
+    <div class='main-container' id='summary'>
+        <nav>
+            <ul>
+                <li><a href='#home'>HOME</a></li>
+                <li><a href='#orders'>Orders</a></li>
+                <li class='active'><a href='#summary'>Orders Summary</a></li>
+            </ul>
+        </nav>
+        <h1>Orders Summary</h1>
+    </div>
+    <!-- Templates -->
+    <script id='Orders-template' type='text/template'>
+        <div class='order'>
+            <div class='C-Address'>
+                <h3>Address</h3>
+                Street: <span>{{street}}</span><br/>
+                City: <span>{{city}}</span><br/>
+                State: <span>{{state}}</span><br/>
+                Pin: <span>{{pin}}</span><br/>
+                Contact: <span>{{phone}}</span>
+            </div>
+            
+            Total: <span>{{total}}</span>
+            <div class='O-items'>
+                <table class='table'>
+                <tr>
+                    <th>ItemCode</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                </tr>
+                </table>
+            </div>
+            <button class='confirm'>Confirm Order</button>
+        </div>
+    </script>
+    
+    <script id='Item-Template' type='text/template'>
+        <tr>
+            <td>{{itemCode}}</td>
+            <td>{{price}}</td>
+            <td>{{qty}}</td>
+            <td>{{date}}</td>            
+        </tr>
+    </script>
+    <script id='Shop-Items-template' type="text/template">
+        <div class='items'>
+            <img class='item-images' width="400vw" height="200vh" src="{{src}}" alt='Product.'/>
+            <span class='item__name'>{{name}}</span>
+            <span class='item__code'>ItemCode: {{code}}</span>
+            <span class='item__cat'>Category: {{cat}}</span> 
+            <span class='q'>Qty. : <input  type='text' label='Quantity' value='{{qty}}' /></span>
+            <span class='p'>Price: <input  type='text' label='Price' value='{{price}}' /></span>
+            <div class="cdl-wrap cdl-grid-2">
+                <button class='Shop__Update cdl-cta  cdl-cta--full cdl-cta--primary'>Update</button>
+                <button class='Shop__Delete cdl-cta  cdl-cta--full cdl-cta--danger'>Delete</button>
+            </div>
+        </div>
+    </script>
+    <script src='./JS/libs/jquery-3.5.1.min.js'></script>
+    <script src='./JS/libs/mustache.js'></script>
+    <script src="./jS/Seller_main.js"></script>
+</body>
+
+</html>

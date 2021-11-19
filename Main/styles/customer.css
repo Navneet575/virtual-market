@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap');
+
+html{
+scroll-behavior: smooth;
+}
+
+*{
+padding: 0;
+margin: 0;
+font-family: 'Roboto Condensed', sans-serif;
+user-select: none;
+color: #494949;
+/* box-sizing: border-box; */
+}
+
+body{
+background: url('./customer.jpg');
+overflow: hidden;
+background-size: cover;
+height: 100%;
+}
+
+.main-container{
+height: 100vh;
+width: 100vw;
+/* border-radius: 1rem; */
+backdrop-filter: blur(5px);
+padding: 1rem;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+nav ul{
+    list-style-type: none;
+    float: right;
+    display: flex;
+    margin: 1vw;
+}
+
+nav ul li{
+    color: #494949;
+    font-size: 1.75vw;
+    margin: 1vw;
+    font-weight: 900;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: .5vw 1vw;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    background: #BFC0C2;
+}
+#cout nav ul li:hover{
+    background-color: #a3e0ec;
+}
+.active{
+    background-color: #BFC0C2;
+}
+.active2{
+    background-color: #a3e0ec;
+}
+#cart h1, #cout h1{
+    text-align: center;
+    margin-left: 15vw;
+}
+
+#UInfo{
+    position: absolute;
+    bottom: 3vh;
+    right: 2vh;
+    margin:3vw 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(78, 78, 78, 0.363);
+    padding: 1vw 2vw;
+    border-radius: 20px;
+    width: 20vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{    
+    float: right;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 2vw;
+    transition: .3s ease;
+    border-radius: 20px;
+    padding: 0.5vw 3vw;
+}
+
+button:hover{
+    background: rgba(255, 255, 255, 0.418);
+}
+
+#User{
+    position: absolute;
+    padding: 1vw;
+    border-radius: 20px;
+    display: flex;
+}
+
+#User h2{
+    margin-left: 1vw;
+    text-align: center;
+    align-self: center;
+    padding: .2em;
+    border:  solid transparent;
+    transition: .3s ease;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#User img{
+    height: 20vh;
+    width: 20vh;
+    border-radius: 100%;
+    border: 4px solid white;
+}
+
+#UInfo h2{
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+#UInfo input{
+    display: block;
+    font-size: 1.25vw;
+    padding: 0.5vw 1vw;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    color:rgb(75, 72, 72);
+}
+
+#UInfo button{
+    cursor: pointer;
+    display: block;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 2vw;
+    padding: .5vw 2vw;
+    margin: auto;
+    background: #BFC0C2;
+    font-weight: 900;
+}
+
+#UInfo button:hover{
+    color:white;
+    background: #444444;
+}
+
+address{
+    position: absolute;
+    bottom: 10vh;
+    font-size: 2vw;
+    margin-left:2vw;
+}
+
+address span{
+    font-weight: 900;
+}
+/* Section 2 */
+#cart{
+    position: relative;
+}
+#cart h1{
+    margin-top: 2vw;
+}
+#cart nav ul, #cout nav ul{
+    margin-right: 2vw;
+    flex-direction: column;
+    border-left: 2px solid #494949;
+}
+
+#cart nav ul li, #cout nav ul li{
+    align-self: flex-end;
+}
+
+#cards{
+    display: flex;
+    background: rgba(0, 0, 0, 0.123);
+    margin:0.5vw;
+    
+    margin-top: 3vw;
+    border-radius: 20px;
+    padding:1vw 2vw;
+    flex-direction: column;
+    width: 28vw;
+    min-height: 40vh;
+    max-height: 75vh;
+    overflow-y: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-bottom: 2px solid #494949;
+}
+
+#cards::-webkit-scrollbar{
+    width: 12px;
+    background-color: #494949;
+}
+
+.item{
+    position: relative;
+    padding: 1vw;
+}
+
+.Checkout{
+    float: right;
+    border-left: 2px solid #494949;
+}
+
+.Checkout h3{
+    padding: .5vw 1vw;
+}
+
+.Checkout__Button{
+    cursor: pointer;
+}
+
+.Checkout__Button:hover{
+    color:#494949;
+    background: rgba(3, 221, 3, 0.568);
+}
+
+.table__items{
+    margin:0.5vw 1vw ;
+    border-radius: 20px;
+    padding: .5vw;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.table__items h3{
+    padding: .5vw;
+    cursor: pointer;
+}
+
+.table__items button{
+    padding: .5vw 1vw;
+    cursor: pointer;
+}
+
+.table__items:hover{
+background: #49494933;
+}
+
+.table__items button:hover{
+    background: rgba(255, 0, 0, 0.534);
+}
+
+.Shop__items{
+    display: flex;
+    flex-direction: column;
+}
+
+#cart>div{
+    display: flex;
+    flex-direction: column;
+}
+
+.item{
+    border-bottom: 2px dashed whitesmoke;
+}
+
+#Image{
+    position: absolute;
+    background-size: cover;
+    right: 25vw;
+    top:18vh;
+    background: rgba(92, 88, 88, 0.178);
+    text-align: center;
+    padding: 1.5vw;
+    min-height: 35vh;
+    max-height: 70vh;
+    border-radius: 20px;
+    width: 35vw; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* #cards::before{
+    content:'Cart Items';
+    font-size: 2vw;
+} */
+/* Checkedout Status Tab */
+#cout ul{
+    font-size: 0.5vw;
+    display: flex;
+    list-style-type: none;
+}
+
+#cout #items{
+    padding: 2vw;
+    margin-top: 5vh;
+    border-top: 2px solid white;
+    display: inline-flex;
+    flex-direction: column;
+    max-height: 70vh;
+    overflow: auto;
+    width: 70vw;
+    /* padding: .2vw; */
+    border-radius: 20px;
+    background: #ABBFC3;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+.Item{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 2vw 1vw;
+  
+}
+
+.O-items{
+        padding: .5vw 1vw;
+        display: inline-flex;
+        flex-direction: column;
+        border-top: 2px solid white;
+}
+
+.O-items span{
+    font-size: larger;
+    padding: 0.2vw;
+    font-weight: 900;
+}

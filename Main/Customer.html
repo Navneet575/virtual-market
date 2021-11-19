@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM | Customer</title>
+    <link rel="stylesheet" href="./Styles/customer.css">
+    <link rel="stylesheet" href="./styles/font-awesome.min.css">
+</head>
+
+<body>
+    <div class='main-container'>
+        <nav>
+            <ul>
+                <li class='active'><a href='#'>HOME</a></li>
+                <li><a href='#cart'>CART</a></li>
+                <li><a href='#cout'>Checkout History</a></li>
+                <li id='logout'>Logout</li>
+            </ul>
+        </nav>
+        <div id='User'>
+            <img src='./Styles/Main.jpg'>
+            <h2><a href='/'>USER NAME</a></h2>
+        </div>
+        <div id='UInfo'>
+            <h2>User Info</h2>
+            <input id='street' type='text' placeholder="Street Address" required /><br />
+            <input id='city' type='text' placeholder="City" required /><br />
+            <input id='state' type='text' placeholder="State" required /><br />
+            <input id='country' type='text' placeholder="Contry" required /><br />
+            <input id='pin' type='text' placeholder="Pin" required /><br />
+            <button id='update'>Add Address</button>
+        </div>
+
+        <address id='address' style='display: none;'>
+            <span id='Addr'>GT ROAD</span><br />
+            <span id='ACity'>jalandhar</span>, <span id='AState'>Punjab</span> <br />
+            <span id='ACount'>India</span> <span id='APin'>144011</span><br />
+            Tel.: <span id='CTel'></span><br>
+            </i>Email: <a id='CMail' href="mailto:me@mydomain.hi"></a>
+
+            <!-- <span id='verified' style='display: none;'><i style='color:green;'
+                    class='fa fa-check'>Verified</i></span></br>                    
+            <span id='notVerified' style=' display:none'><i style='color:red;' class='fa fa-times'>Email Not
+                    Verified</i><button id='verify'>Verify Here</button>
+                <div id='con' style="display: none;">
+                    <input type='text' id='vToken' placeholder="Enter Verifiaction Token" />
+                    <button type='submit' id='confirmToken'>Confirm</button>
+                </div>
+            </span> -->
+        </address>
+    </div>
+    <div class='main-container' id='cart'>
+        <nav>
+            <ul>
+                <li><a href='#'>HOME</a></li>
+                <li class='active'><a href='#cart'>CART</a></li>
+                <li><a href='#cout'>Checkout History</a></li>
+            </ul>
+        </nav>
+        <h1>CART</h1>
+        <!-- <h1>There are no items in your cart!</h1> -->
+        <div id='cards'>
+        </div>
+        <div id='Image'>
+            <h2>Product Image, Click on an Item in the list.</h2>
+            <img src=''>
+        </div>
+    </div>
+
+
+    <div class='main-container' id='cout'>
+        <nav>
+            <ul>
+                <li><a href='#'>HOME</a></li>
+                <li><a href='#cart'>CART</a></li>
+                <li class='active2'><a href='#cout'>Checkout History</a></li>
+            </ul>
+        </nav>
+        <h1>CheckOut History</h1>
+        <h1 id='bought'>You haven't Ordered Anything, yet</h1>
+        <div id="items">
+        </div>
+    </div>
+    <!-- Templates -->
+    <script id='ShopCart-template' type="text/template">
+        <div class='item'> 
+            <h2 class='item__vId'>Shop: {{SName}}</h2>
+            <div class='Shop__items'></div>
+            <div class='Checkout'>
+                <h3 id="Total__Price">Total: {{total}}</h3>
+                <button class='Checkout__Button' >CheckOut</button>
+            </div>
+        </div>
+    </script>
+
+    <script id='Cart__item' type="text/template">
+        <li class = 'table__items'>    
+            <button class='delete__Cart'><i class='fa fa-trash'></i></button>
+            <h3>Code: {{code}}</h3>
+            <h3 class='items_qty'>Qty: {{qty}}</h3>
+            <h3 class='items_price'>Price: {{price}}</h3>
+         </li>
+    </script>
+    <script id="CheckoutItem-template" type='text/template'>
+        <div class='O-items'>
+                    <span>Shop: {{vId}}</span>        <br/>
+                    <span>ItemCode: {{itemCode}}</span>   <br/>
+                    <span>Price: {{price}}</span>      <br/>
+                    <span>Quantity: {{qty}}</span>        <br/>
+                    <span>Dated: {{date}}</span>         <br/>
+                    <span class='confirmed'>Status: Not Confirmed</span>  
+        </div>
+    </script>
+    <script src='./JS/libs/jquery-3.5.1.min.js'></script>
+    <script src='./JS/libs/mustache.js'></script>
+    <script src="./JS/Customer_main.js"></script>
+</body>
+
+</html>
