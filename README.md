@@ -1,2 +1,6 @@
-# virtual-market
-This is a shop based web platform so as to help small shops to take them online. Main technologies used are HTML, CSS, Javascript, NodeJs and MongoDB.
+SE LAB PROJECT
+
+VIRTUAL MARKET
+
+Clone the repo:
+git clone https://github.com/sukhraj2454/VMarket
