@@ -1,0 +1,7 @@
+{
+  "development": {
+    "PORT": 5500,
+    "MONGODB_URI": "mongodb://localhost:27017/UserData",
+    "JWT_secret": "sdfhjsahfkjfsdhfjksdhkj"
+  }
+}
